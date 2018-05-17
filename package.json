@@ -1,0 +1,35 @@
+{
+  "name": "flips-client",
+  "version": "1.0.0",
+  "description": "nodejs client for handling feature flags",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc && tsc ./test/test.ts --outDir test --skipLibCheck --experimentalDecorators --target ES6 && mocha",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcraa/flips-client-node.git"
+  },
+  "keywords": [
+    "feature",
+    "feature-flag",
+    "feature-switch",
+    "flag",
+    "switch",
+    "toggle"
+  ],
+  "author": "Peter Makra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcraa/flips-client-node/issues"
+  },
+  "homepage": "https://github.com/mcraa/flips-client-node#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^10.1.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "typescript": "^2.8.3"
+  }
+}
