@@ -2,7 +2,8 @@
   "name": "flips-client",
   "version": "1.0.0",
   "description": "nodejs client for handling feature flags",
-  "main": "dist/index.js",
+  "main": "dist/index",
+  "typings": "dist/index",
   "scripts": {
     "test": "tsc && tsc ./test/test.ts --outDir test --skipLibCheck --experimentalDecorators --target ES6 && mocha",
     "build": "tsc"
