@@ -40,7 +40,15 @@ export default class Flips {
             if (Array.isArray(config.envvar)){
                 for(let feature of config.envvar){
                     if (!this.features.some(f => f.feature === feature)) {
-                        this.features.push(<Feature>{feature: feature, switchedOn: true})
+                        if (process.env[feature]) {
+                            this.features.push(<Feature>{feature: feature, switchedOn: true})
+                        }
+                    }
+                }
+            } else {
+                if (!this.features.some(f => f.feature === config.envvar)) {
+                    if (process.env[config.envvar]) {
+                        this.features.push(<Feature>{feature: config.envvar, switchedOn: true})
                     }
                 }
             }
